@@ -4,12 +4,6 @@
 #include <stdio.h>
 using namespace cv;
 
-static void help()
-{
-	printf("\nThis program demonstrates OpenCV drawing and text output functions.\n"
-		"Usage:\n"
-		"   ./drawing\n");
-}
 static Scalar randomColor(RNG& rng)
 {
 	int icolor = (unsigned)rng;
@@ -18,12 +12,13 @@ static Scalar randomColor(RNG& rng)
 
 int main(int argc, char** argv)
 {
-	cv::CommandLineParser parser(argc, argv, "{help h||}");
-	if (parser.has("help"))
+//	cv::CommandLineParser parser(argc, argv, "{help h||}");
+/*	if (parser.has("help"))
 	{
 		help();
 		return 0;
 	}
+	*/
 	char wndname[] = "Drawing Demo";
 	const int NUMBER = 1000;
 	const int DELAY = 5;
